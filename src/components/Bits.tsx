@@ -154,8 +154,8 @@ export function CompactCard({ e, hl }: { e: EventItem; hl: boolean }) {
 }
 
 /** Animated number (ease-out cubic, 1.1 s). Starts on mount or when scrolled into view. */
-export function CountUp({ to, fmt, dec = 0, onView, start }: { to: number; fmt?: 'inr'; dec?: number; onView?: boolean; start?: boolean }) {
-  const ref = useRef<HTMLSpanElement>(null);
+export function CountUp({ to, fmt, dec = 0, onView, start, as = 'span' }: { to: number; fmt?: 'inr'; dec?: number; onView?: boolean; start?: boolean; as?: 'span' | 'b' }) {
+  const ref = useRef<HTMLElement>(null);
   const [v, setV] = useState(onView ? to : 0);
   useEffect(() => {
     if (start === false) return;
@@ -177,7 +177,8 @@ export function CountUp({ to, fmt, dec = 0, onView, start }: { to: number; fmt?:
     return () => { cancelAnimationFrame(raf); io?.disconnect(); };
   }, [to, onView, start]);
   const txt = fmt === 'inr' ? '₹' + Math.round(v).toLocaleString('en-IN') : dec ? v.toFixed(dec) : Math.round(v).toLocaleString('en-IN');
-  return <span ref={ref}>{txt}</span>;
+  const Tag = as;
+  return <Tag ref={ref as React.RefObject<HTMLElement & HTMLSpanElement>}>{txt}</Tag>;
 }
 
 /** QR block: 21×21 modules */

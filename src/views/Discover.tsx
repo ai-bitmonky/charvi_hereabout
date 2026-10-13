@@ -164,8 +164,8 @@ export function HostBand() {
     <div className="hband" id="hband">
       <Photo k="wood" sizes="(max-width: 899px) 100vw, 1320px" />
       <div className="hb-stat">
-        <div><b><CountUp to={62400} fmt="inr" onView /></b><span>Paid to hosts nearby</span></div>
-        <div><b><CountUp to={4.9} dec={1} onView /></b><span>Average host rating</span></div>
+        <div><CountUp as="b" to={62400} fmt="inr" onView /><span>Paid to hosts nearby</span></div>
+        <div><CountUp as="b" to={4.9} dec={1} onView /><span>Average host rating</span></div>
       </div>
       <div className="hb-c">
         <span className="mono">For hosts</span>

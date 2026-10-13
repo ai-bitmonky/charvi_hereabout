@@ -26,13 +26,13 @@ export default function Host() {
         </div>
 
         <div className="stats">
-          <div className="stat" style={vars({ '--i': 0 })}><span className="mono">Upcoming events</span><b><CountUp to={3} /></b><small>1 sold out</small></div>
-          <div className="stat" style={vars({ '--i': 1 })}><span className="mono">Guests this month</span><b><CountUp to={46} /></b><small className="up">↑ 12 on last month</small></div>
+          <div className="stat" style={vars({ '--i': 0 })}><span className="mono">Upcoming events</span><CountUp as="b" to={3} /><small>1 sold out</small></div>
+          <div className="stat" style={vars({ '--i': 1 })}><span className="mono">Guests this month</span><CountUp as="b" to={46} /><small className="up">↑ 12 on last month</small></div>
           <div className="stat hot" style={vars({ '--i': 2 })}>
             <svg className="sp" viewBox="0 0 90 34" aria-hidden="true"><path d="M2 28 L14 24 L26 26 L38 18 L50 20 L62 12 L74 14 L88 4" fill="none" stroke="#160906" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity=".7" /></svg>
-            <span className="mono">Earned this month</span><b><CountUp to={62400} fmt="inr" /></b><small>Paid out every Monday</small>
+            <span className="mono">Earned this month</span><CountUp as="b" to={62400} fmt="inr" /><small>Paid out every Monday</small>
           </div>
-          <div className="stat" style={vars({ '--i': 3 })}><span className="mono">Host rating</span><b><CountUp to={5} dec={1} /></b><small>From 41 reviews</small></div>
+          <div className="stat" style={vars({ '--i': 3 })}><span className="mono">Host rating</span><CountUp as="b" to={5} dec={1} /><small>From 41 reviews</small></div>
         </div>
 
         <div className="hgrid">

@@ -961,6 +961,7 @@ em.ac,.ac{font-style:normal;color:var(--accent)}
  body:has(.bbar) .toast{bottom:calc(96px + var(--safe-b))}
 }
 /* ================= native mobile layer ================= */
+.abar,.lt,.fbtn,.chv,.tk-brand{display:none}
 .fact{text-align:left;width:100%;color:inherit;font:inherit}
 .seg-full{display:flex;width:100%}.seg-full button{flex:1}
 .nlist{margin-top:18px;border-radius:16px;background:var(--surface-2);overflow:hidden}
@@ -1083,6 +1084,7 @@ em.ac,.ac{font-style:normal;color:var(--accent)}
 .img.nx img{object-fit:cover}
 #explore{scroll-margin-top:calc(var(--hdr) + var(--safe-t))}
 @media (max-width:899px){.view{animation:none}}
+@media (min-width:600px) and (max-width:899px){.cards{grid-template-columns:repeat(2,1fr)}.tk-st .qr{width:150px;height:150px}}
 /* native push / pop / tab transitions (mobile, View Transitions API) */
 @media (max-width:899px){
  .tabbar{view-transition-name:tabbar}
